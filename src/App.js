@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import Calculadora from './componentes/Calculadora';
+import Reloj from './componentes/Reloj';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className='App-header'>
+          <Link to="/calculadora" className="btn-calculadora">Calculadora</Link>
+          <Link to="/reloj" className="btn-reloj">Reloj</Link>
+        </div>
+        <Routes>
+          <Route path="/calculadora" element={<Calculadora />} />
+          <Route path="/reloj" element={<Reloj />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
+
 export default App;
+
