@@ -1,1 +1,1 @@
-Proyecto de pruebas de React
+Proyecto en construcción de la pagina: andres-kaizzen.net
